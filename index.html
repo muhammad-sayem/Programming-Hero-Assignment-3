@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Assignment-3 </title>
+
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- DaisyUI + Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .font-manrope {
+            font-family: "Manrope", sans-serif;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'arrow-bg': '#ABEF5F'
+                    },
+                },
+                container: {
+                    center: true,
+                    padding: '2rem',
+                    screens: {
+                        sm: '100%',
+                        md: '100%',
+                        lg: '1024px',
+                        xl: '1280px',
+                    },
+                },
+            }
+        }
+    </script>
+</head>
+
+<body class="font-manrope">
+    <header class="border-2 border-green-300 bg-[#F6F6F6]">
+        <!-- Navbar Starts -->
+        <nav class="container mx-auto px-0">
+            <div class="navbar bg-transparent lg:p-0">
+                <div class="navbar-start">
+                    
+                    <div class="flex justify-center items-center gap-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 bg-arrow-bg p-1 rounded-full">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                          </svg>
+                          
+                        <a class="btn btn-ghost text-2xl font-extrabold p-0">Rinterio</a>
+                    </div>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li class=" hover:font-extrabold"><a class="text-sm text-[#737373"> Home </a></li>
+                        <li class="hover:font-extrabold"><a class="text-sm text-[#737373]"> Services </a></li>
+                        <li class="hover:font-extrabold"><a class="text-sm text-[#737373]"> Portfolio </a></li>
+                        <li class="hover:font-extrabold"><a class="text-sm text-[#737373]"> Blogs </a></li>
+                        <li class="hover:font-extrabold"><a class="text-sm text-[#737373]"> Contact Us </a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end space-x-2">
+                    <div class="hidden lg:flex items-center gap-x-2">   
+                        <a href="#"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 bg-white p-1 rounded-full drop-shadow-md">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>    
+                        </a>
+
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 bg-white p-1 rounded-full drop-shadow-md">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                              </svg> 
+                        </a>
+                          
+                        <a class="btn bg-arrow-bg rounded-3xl"> <span class="text-base font-bold"> Book Consult </span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 bg-black text-white p-1 rounded-full">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                          </svg>
+                        </a>
+                    </div>
+
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <i class="fa-solid fa-bars text-2xl text-[#737373] bg-white py-1.5 px-3 rounded-full"></i>
+                        </div>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0">
+                            <li><a> Home </a></li>
+                            <li><a> Services </a></li>
+                            <li><a> Portfolio </a></li>
+                            <li><a> Blogs </a></li>
+                            <li><a> Contact Us </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Banner Section Starts -->
+        <section>
+
+        </section>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+    </main>
+
+
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
